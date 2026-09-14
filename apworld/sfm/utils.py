@@ -38,14 +38,12 @@ COMMON_NAKED_MISSIONS = {
 }
 
 COMMON_LARGE_FLASH_MISSIONS = {
-    "Flash in light": None,
     "Use vending machine while flashing": None,
     "Flash near someone": None,
     "Flash while watched": None,
     "Show off flashed parts": None,
 }
 COMMON_LARGE_NAKED_MISSIONS = {
-    "Naked in light": None,
     "Vending machine while naked": None,
     "Naked near someone": None,
     "Show off naked body": None,
@@ -63,18 +61,21 @@ COMMON_SMALL_NAKED_MISSIONS = {
 
 SPECIAL_FLASH_MISSIONS = {
     "RA": {
+        "Flash in light": None,
         "Move 50m with vibe while flashing": Has("Vibrator"),
         "Press intercom and wait while flashing": None,
         "Be in crosswalk while flashing": None,
         "Move 50m while flashing and blindfolded": Has("Eye Mask"),
     },
     "CP": {
+        "Flash in light": None,
         "Sit on chair while flashing": None,
         "Be in plaza while flashing": None,
         "Move 60m with vibe while flashing": Has("Vibrator"),
         "Move 60m while flashing and blindfolded": Has("Eye Mask"),
     },
     "DT": {
+        "Flash in light": None,
         "Be in footbridge while flashing": None,
         "Move 50m with vibe while flashing": Has("Vibrator"),
         "Move 50m while flashing and blindfolded": Has("Eye Mask"),
@@ -105,6 +106,7 @@ SPECIAL_FLASH_MISSIONS = {
 
 SPECIAL_NAKED_MISSIONS = {
     "RA": {
+        "Naked in light": None,
         "Press intercom and wait while naked": None,
         "Move 60m with vibe while naked": Has("Vibrator"),
         "Move 25m while naked and crouching": None,
@@ -113,6 +115,7 @@ SPECIAL_NAKED_MISSIONS = {
         "Move 90m away from coat": None,
     },
     "CP": {
+        "Naked in light": None,
         "Sit on chair while naked": None,
         "Be in plaza while naked": None,
         "Move 80m away from coat": None,
@@ -122,6 +125,7 @@ SPECIAL_NAKED_MISSIONS = {
         "Move 60m while naked and blindfolded": Has("Eye Mask"),
     },
     "DT": {
+        "Naked in light": None,
         "Move 30m with vibe while naked": Has("Vibrator"),
         "Move 15m while naked and crouching": None,
         "Leave coat outside bridge and stand on": None,
