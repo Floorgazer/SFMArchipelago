@@ -1,0 +1,6 @@
+name: TestSFM
+description: YAML test
+game: SFM
+SFM:
+    day: false
+    trap_chance: 0
