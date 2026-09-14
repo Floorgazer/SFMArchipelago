@@ -1,0 +1,12 @@
+localhost
+SFM
+
+----------------
+
+This file should contain, in order on individual lines:
+
+Server IP
+Slot Name
+Password
+
+Any content after the first three lines is ignored
