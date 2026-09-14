@@ -32,7 +32,7 @@ public class LocationManager
 
         switch (stage)
         {
-            case StageType.TokyoStreet:
+            case StageType.Residence:
                 APMissionName += "RA: ";
                 break;
             case StageType.Park:
