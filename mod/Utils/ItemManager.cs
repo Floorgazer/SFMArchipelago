@@ -259,15 +259,11 @@ public class ItemResolver {
                 message = "Received Skill: Show NPC Direction";
                 break;
             case 151:
-                switch (ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount)
+                if (ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount < 5)
                 {
-                    case 0:
-                        GameEffects.UnlockSkill(SkillType.Slow);
-                        ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount = 1;
-                        message = "Received Skill: Slow Motion";
-                        break;
-                    // TODO: How to increase slowmo level???
-                    // Need to relock the shop option once it's taken if the level you have is equal to your unlock
+                    GameEffects.UnlockSkill(SkillType.Slow);
+                    ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount += 1;
+                    message = "Received Skill: Slow Motion (Level "+ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount+")";
                 }
                 break;
             case 152:

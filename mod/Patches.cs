@@ -11,6 +11,7 @@ using ExposureUnnoticed2.Scripts.OtherScene;
 using ExposureUnnoticed2.Scripts.UI;
 using ExposureUnnoticed2.Scripts.InGame;
 using ExposureUnnoticed2.Scripts.Base;
+using ExposureUnnoticed2.Master.Skill;
 
 using SFMArchipelago.Utils;
 using SFMArchipelago.Archipelago;
@@ -110,5 +111,25 @@ class PatchTitleScreen
     static void ContinuePostfix(TitleSceneView __instance)
     {
         Plugin.NewGame = false;
+    }
+}
+
+[HarmonyPatch(typeof(SkillPanelView))]
+class PatchSkillPanelView
+{
+    [HarmonyPrefix]
+    [HarmonyPatch("OnClickReinforce")]
+    static void ReinforcePrefix(MSkillRecord record)
+    {
+        if (Plugin.LoadedInSlot)
+        {
+            if (record.Type == SkillType.Slow)
+            {
+                if (GameState.GameStateData.SkillLevel[SkillType.Slow] >= ArchipelagoClient.ServerData.progressionData.progressiveSlowMotionCount)
+                {
+                    GameEffects.LockSkill(SkillType.Slow);
+                }
+            }
+        }
     }
 }

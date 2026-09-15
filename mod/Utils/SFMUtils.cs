@@ -156,6 +156,14 @@ public class GameEffects
 
     }
 
+    public static void LockSkill(SkillType skillType)
+    {
+        MSkill.Get(skillType).ReleaseRank = 8;
+        // Update the progression data so we can save the state of things.
+        ArchipelagoClient.ServerData.progressionData.SkillRelease[skillType] = true;
+
+    }
+
     public static void AddRP(int rp)
     {
         GameState.GameStateData.CurrentRp += rp;
