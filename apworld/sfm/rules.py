@@ -47,6 +47,7 @@ def set_all_locations_rules(world: SFMWorld) -> None:
             if rule is not None:
                 name = stage + ": " + mission
                 location = world.get_location(name)
+                world.set_rule(location, rule)
         for mission, rule in COMMON_NAKED_MISSIONS.items():
             if rule is not None:
                 name = stage + ": " + mission
@@ -72,6 +73,7 @@ def set_all_locations_rules(world: SFMWorld) -> None:
             if rule is not None:
                 name = stage + ": " + mission
                 location = world.get_location(name)
+                world.set_rule(location, rule)
         for mission, rule in COMMON_NAKED_MISSIONS.items():
             if rule is not None:
                 name = stage + ": " + mission
@@ -97,6 +99,7 @@ def set_all_locations_rules(world: SFMWorld) -> None:
             if rule is not None:
                 name = stage + ": " + mission
                 location = world.get_location(name)
+                world.set_rule(location, rule)
         for mission, rule in COMMON_NAKED_MISSIONS.items():
             if rule is not None:
                 name = stage + ": " + mission

@@ -213,7 +213,7 @@ public class LocationManager
                 return "Wash clothes";
             case "Place the coat outside the apartment and go to the top floor":
                 return "Leave coat outside and go to top floor";
-            case "Leave the coat outside the elevator and stop at every floor naked":
+            case "Leave the coat outside the elevator and stop at every floor naked.":
                 return "Leave coat outside and stop at every floor";
             case "Leave your coat outside the elevator, then use the elevator to move":
                 return "Leave coat outside elevator and use it";
